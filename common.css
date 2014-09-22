@@ -29,7 +29,6 @@ a#index{
 }
 body{
     position: relative;
-    display: block;
     top: 170px;
     left: 82px;
     height: 575px;
@@ -39,6 +38,7 @@ body{
     background-repeat: no-repeat;
     background-position-y: 85%;
     background-position-x: 10px;
+    overflow: hidden;
 }
 header{
     position: relative;
@@ -53,7 +53,6 @@ header p#titre{
     text-align: center;
     padding-top: 9px;
     font-size: 20px;
-
 }
 header img#iconeHeaderGauche{
     position: absolute;
@@ -105,16 +104,89 @@ footer span.boutonMenuBasSeul img{
     margin-bottom: -7px;
     margin-right: 10px;
 }
+button{
+    cursor: pointer;
+}
+input[type=checkbox]{
+    position: relative;
+    height: 31px;
+    width: 52px;
+    padding: 1px;
+    -webkit-appearance: none;
+    -webkit-transform: scale(1);
+    box-shadow: inset 0px 0px 0px 1px #e6e6e6;
+    border-radius: 15px;
+    background-color: #fff;
+    cursor: pointer;
+}
+input[type=checkbox]:checked {
+    box-shadow: inset 0px 0px 0px 20px #53d76a;
+}
+input[type=checkbox]:after {
+    position: absolute;
+    height: 29px;
+    width: 29px;
+    content: '';
+    border-radius: 15px;
+    box-shadow: 0px 2px 2px 1px rgba(0,0,0,.2);
+    background-color: #fff;
+}
+input[type="checkbox"]:checked:after {
+    left: 22px;
+}
 
 /* INDEX */
 body#corpsAccueil{
     background-color: #02b7aa;
     background-image: none;
 }
-body#corpsAccueil img{
-    position: relative;
+body#corpsAccueil a img{
     margin-top: 150px;
     margin-left: 19.5px;
+}
+
+/* CONNEXION */
+body#corpsAccueil img#logo{
+    margin: 80px 0px 50px 19.5px;
+}
+body#corpsAccueil div#connexion{
+    margin: 0px 10px 90px 10px;
+    height: 150px;
+    width: 305px;
+    background-color: #81cdc8;
+    border-radius: 30px;
+    overflow: hidden;
+}
+body#corpsAccueil div#connexion input{
+    height: 40px;
+    width: 285px;
+    margin: 5px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background-color: inherit;
+}
+body#corpsAccueil div#connexion input::-webkit-input-placeholder{
+    color: #fff;
+}
+body#corpsAccueil div#connexion button{
+    height: 50px;
+    width: 305px;
+    background-color: #004b46;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+body#corpsAccueil button#inscrire{
+    margin: 10px;
+    height: 50px;
+    width: 305px;
+    border-radius: 10px;
+    background-color: #ff402d;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* ACCUEIL */
@@ -122,10 +194,20 @@ div.tuile{
     display: inline-block;
     height: 143px;
     width: 143px;
-    margin: 10px  0px 0px 10px;
+    margin: 10px  0px -5px 10px;
     background-color: #fff;
     border: solid 1px #ccc;
     box-shadow: 1px 1px 3px #ccc;
+    overflow: hidden;
+}
+div.tuile img{
+    display: block;
+    margin: 30px auto 20px auto;
+}
+div.tuile p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 /* PROFIL */
@@ -178,9 +260,9 @@ div#photoProfil img{
 }
 div#generalProfil{
     float: right;
-    margin-right: 10px; 
+    margin-right: 12px; 
     height: 100px;
-    width: 195px;
+    width: 190px;
 }
 div#generalProfil p#nom{
     text-align: center;
@@ -188,8 +270,9 @@ div#generalProfil p#nom{
     font-size: 17px;
 }
 div#generalProfil p#age img,
-div#generalProfil p#lieu img{
-    margin: 10px 10px -2px 5px;
+div#generalProfil p#lieu img,
+div#generalProfil p#prix img{
+    margin: 5px 10px -2px 5px;
     height: 15px;
     width: 15px;
 }
@@ -205,9 +288,201 @@ div#corpsProfil{
     width: 303px;
     border: solid 1px #ccc;
     box-shadow: 1px 1px 3px #ccc;
-    background-color: #fff;    
+    background-color: #fff;
 }
 
+/* ANIMAUX */
+div.animal{
+    position: relative;
+    display: block;
+    margin: 10px 10px;
+    height: 80px;
+    width: 303px;
+    border: solid 1px #ccc;
+    box-shadow: 1px 1px 3px #ccc;
+    background-color: #fff;
+    z-index: 1000;
+}
+div.animal img.chat{
+    float: left;
+    margin: 10px;
+    height: 58px;
+    width: 58px;
+    border-radius: 60px;
+    border: solid 1px #ccc;
+}
+div.animal p.nom{
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 40px 10px 0px;
+}
+div.animal p.age{
+    margin-left: 90px;
+}
+div.animal p.race{
+    margin: -23px 0px 0px 165px;
+}
+div.animal p img{
+    margin-right: 5px;
+    margin-bottom: -2px;
+}
+div.animal img.fleche{
+    position: relative;
+    float: right;
+    top: -37px;
+    right: 10px;
+}
+div#description{
+    display: block;
+    margin: -11px 10px 10px 10px;
+    height: 120px;
+    width: 303px;
+    border: solid 1px #ccc;
+    background-color: #fff;
+    z-index: 0;
+}
+
+/* AVIS */
+p#note{
+    font-size: 50px;
+    text-align: center;
+    color: #40d32d;
+}
+div#barreEtoile{
+    display: block;
+    margin: 0px auto;
+    width: 142px;   
+}
+button#boutonVoter{
+    float: right;
+    margin-top: -38px;
+    margin-right: 10px;
+    padding: 8px 12px 5px 12px;
+    background-color: #eee;
+    color: #2789e4;
+    font-weight: bold;
+    border: solid 1px #2789e4;
+    border-radius: 6px;
+}
+div.commentaire{
+    height: auto;
+    width: 303px;
+    margin: 10px;
+    border: solid 1px #ccc;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px #ccc;
+}
+div.commentaire p.auteurAvis{
+    font-weight: bold;
+    margin-left: 3px;
+}
+div.commentaire div.noteAvis{
+    float: right;
+    margin: -22px 3px 0px 0px;
+}
+div.commentaire div.noteAvis img{
+    height: 15px;
+    width: 15px;
+    margin: auto -2px;
+}
+div.commentaire p.commentaireAvis{
+    width: 297px;
+    margin-left: 3px;
+    text-align: justify;
+}
+footer input{
+    margin: 8px 0px 0px 10px;
+    height: 35px;
+    width: 220px;
+    font-size: 18px;
+}
+footer button{
+    float: right;
+    margin-top: 4px;
+    margin-right: 4px;
+    padding: 8px 12px 5px 12px;
+    background-color: #fff;
+    color: #2789e4;
+    font-weight: bold;
+    border: solid 1px #2789e4;
+    border-radius: 6px;
+}
+
+/* CARTE */
+div#localiserLieu{
+    position: absolute;
+    bottom: 0px;
+    height: 30px;
+    width: 303px;
+    margin: 10px;
+    border: solid 1px #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    font-weight: bold;
+}
+div#localiserLieu img{
+    float: left;
+    margin: 5px 13px 5px 12px;
+}
+div#localiserLieu input{
+    margin: 5px 0px 0px 10px;
+    height: 25px;
+    width: 200px;
+    text-align: right;
+    font-weight: bold;
+}
+div#localiserLieu div#geolocalisation{
+    display: inline-block;
+    float: right;
+    height: 30px;
+    width: 30px;
+    border-left: solid 1px #ccc;
+    cursor: pointer;
+}
+div#localiserLieu div#geolocalisation img{
+    margin: 5px;
+}
+
+/* CONTACT */
+div.contact{
+    height: 40px;
+    width: 100%;
+    background-color: #fff;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ccc;
+    overflow: hidden;
+}
+div.contact p{
+    width: 250px;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 7px;
+    margin-left: 15px;
+}
+div.contact img{
+    float: right;
+    margin-top: -27px;
+    margin-right: 15px;
+}
+
+/* CHATROULETTE */
+div.bulle{
+    margin: 10px;
+    min-height: 10px;
+    width: 200px;
+    border: solid 1px #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+}
+div.bulleDroite{
+    float: right;
+    background-color: #2789e4;
+    color: #fff;
+}
+div.bulleGauche{
+    float: left;
+}
 /* RECHERCHER */
 div#rechercheParNom{
     position: relative;
@@ -239,7 +514,6 @@ div#rechercheParNom button{
     font-weight: bold;
     border: solid 1px #ccc;
     border-radius: 6px;
-    cursor: pointer;
 }
 div#rechercheParDate{
     position: relative;
@@ -261,6 +535,26 @@ div#rechercheParDate input{
     width: 200px;
     text-align: right;
     font-weight: bold;
+}
+div#trie{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ccc;
+    overflow: hidden;
+}
+div#trie p{
+    margin-top: 5px;
+    text-align: center;
+
+}
+div#trie img{
+    float: right;
+    margin-top: -25px;
+    margin-right: 10px;
 }
 div#rechercheParLieu{
     position: relative;
@@ -301,5 +595,58 @@ div.personneCherchee{
     margin: 0px 10px -1px 10px;
     background-color: #fff;
     border: solid 1px #ccc;
-    box-shadow: 1px 1px 3px #ccc;
+    overflow: hidden;
+}
+div.personneCherchee img{
+    float: left;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    border-radius: 40px;
+    border: solid 1px #ccc;
+}
+div.personneCherchee p.nom{
+    margin: 15px 50px -35px 0px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.personneCherchee p.note{
+    float: right;
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+/* SNAPCHAT */
+div#alert{
+    height: 50px;
+    width: 303px;
+    margin: 200px 10px -1px 10px;
+    background-color: #fff;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+/* PROPOSER */
+p#disponible{
+    margin: 20px 15px 15px 15px;
+    font-size: 18px;
+}
+p#disponible input{
+    float: right;
+    margin-top: -5px;
+}
+button#validerDisponibilite{
+    margin: 20px 10px;
+    height: 50px;
+    width: 305px;
+    border-radius: 10px;
+    background-color: #53d76a;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 0px 0px 1px #e6e6e6;
 }
