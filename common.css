@@ -1,0 +1,305 @@
+*{
+    /*    
+        list-style-type: none;
+        resize: none;*/
+    font-family: 'Kalinga';/*'Century Gothic';*/
+    text-decoration: none; /* Soulignement des liens, ... */
+    font-size: 15px;
+    color: #555555;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none; /* bordure bleu lors du focus d'un input */
+}
+html{
+    background-image: url(resources/iphone.png);
+    background-repeat: no-repeat;
+    background-position-x: 50px;
+    background-position-y: 50px;
+    min-height: 925px; 
+    min-width: 485px;
+}
+a#index{
+    position: absolute;
+    height: 61px;
+    width: 61px;
+    bottom: -86px;
+    left: 132px;
+    border-radius: 100px;
+}
+body{
+    position: relative;
+    display: block;
+    top: 170px;
+    left: 82px;
+    height: 575px;
+    width: 325px;
+    background-color: #eee;
+    background-image: url(resources/chat.png);
+    background-repeat: no-repeat;
+    background-position-y: 85%;
+    background-position-x: 10px;
+}
+header{
+    position: relative;
+    height: 45px;
+    width: 100%;
+    background-color: #fff;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ccc;
+}
+header p#titre{
+    text-align: center;
+    padding-top: 9px;
+    font-size: 20px;
+
+}
+header img#iconeHeaderGauche{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+header img#iconeHeaderDroit{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+footer{
+    position: absolute;
+    bottom: 0px;
+    height: 45px;
+    width: 100%;
+    background-color: #fff;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #ccc;
+}
+footer span.boutonMenuBas{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    color: #2789e4;
+    font-size: 17px;
+
+}
+footer span.boutonMenuBas img{
+    margin-top: 10px;
+    margin-bottom: -7px;
+    margin-right: 10px;
+}
+footer span.boutonMenuBasSeul{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: #2789e4;
+    font-size: 17px;
+
+}
+footer span.boutonMenuBasSeul img{
+    margin-top: 10px;
+    margin-bottom: -7px;
+    margin-right: 10px;
+}
+
+/* INDEX */
+body#corpsAccueil{
+    background-color: #02b7aa;
+    background-image: none;
+}
+body#corpsAccueil img{
+    position: relative;
+    margin-top: 150px;
+    margin-left: 19.5px;
+}
+
+/* ACCUEIL */
+div.tuile{
+    display: inline-block;
+    height: 143px;
+    width: 143px;
+    margin: 10px  0px 0px 10px;
+    background-color: #fff;
+    border: solid 1px #ccc;
+    box-shadow: 1px 1px 3px #ccc;
+}
+
+/* PROFIL */
+div#menuProfil{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+div#menuProfil div{
+    display: inline-block;
+    height: 23px;
+    width: 100px;
+    margin-top: 6px;
+    padding-top: 3px;
+    border-width: 1px;
+    border-color: #ccc;
+    text-align: center;
+    color: #2789e4;
+    background: #fff;
+}
+div#menuProfil div#ongletProfilGauche{
+    margin-left: 10px;
+    border-style: solid none solid solid;
+    border-radius: 20px 0px 0px 20px;
+}
+div#menuProfil div#ongletProfilCentre{
+    border-style: solid none;
+    border-style: solid;
+}
+div#menuProfil div#ongletProfilDroit{
+    border-style: solid solid solid none;
+    border-radius: 0px 20px 20px 0px;
+}
+div#photoProfil{
+    position: relative;
+    display: inline-block;
+    margin: 0px 10px;
+    height: 98px;
+    width: 98px;
+    border: solid 1px #ccc;
+    border-radius: 100px;
+    box-shadow: 1px 1px 3px #ccc;
+    background-color: #fff;
+    overflow: hidden;
+}
+div#photoProfil img{
+    height: 100%;
+    width: 100%;
+}
+div#generalProfil{
+    float: right;
+    margin-right: 10px; 
+    height: 100px;
+    width: 195px;
+}
+div#generalProfil p#nom{
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+}
+div#generalProfil p#age img,
+div#generalProfil p#lieu img{
+    margin: 10px 10px -2px 5px;
+    height: 15px;
+    width: 15px;
+}
+div#generalProfil span#note{
+    float: right;
+    margin-top: -62px;
+    font-size: 50px;
+    color: #40d32d;
+}
+div#corpsProfil{
+    margin: 10px 10px;
+    height: 300px;
+    width: 303px;
+    border: solid 1px #ccc;
+    box-shadow: 1px 1px 3px #ccc;
+    background-color: #fff;    
+}
+
+/* RECHERCHER */
+div#rechercheParNom{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ccc;
+}
+div#rechercheParNom img#loupe{
+    margin: 15px 5px -5px 10px;
+}
+div#rechercheParNom input{
+    font-size: 15px;
+    width: 160px;
+    height: 20px;
+}
+div#rechercheParNom img#croix{
+    margin: 15px 0px -5px 0px;
+}
+div#rechercheParNom button{
+    float: right;
+    margin-top: 6px;
+    margin-right: 6px;
+    padding: 8px 12px 5px 12px;
+    background-color: #fff;
+    color: #aaa;
+    font-weight: bold;
+    border: solid 1px #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+}
+div#rechercheParDate{
+    position: relative;
+    height: 65px;
+    width: 303px;
+    margin: 10px;
+    border: solid 1px #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    font-weight: bold;
+}
+div#rechercheParDate img{
+    float: left;
+    margin: 20px 10px;
+}
+div#rechercheParDate input{
+    margin: 5px 0px 0px 5px;
+    height: 25px;
+    width: 200px;
+    text-align: right;
+    font-weight: bold;
+}
+div#rechercheParLieu{
+    position: relative;
+    height: 30px;
+    width: 303px;
+    margin: 10px;
+    border: solid 1px #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    font-weight: bold;
+}
+div#rechercheParLieu img{
+    float: left;
+    margin: 5px 13px 5px 12px;
+}
+div#rechercheParLieu input{
+    margin: 5px 0px 0px 10px;
+    height: 25px;
+    width: 180px;
+    text-align: right;
+    font-weight: bold;
+}
+div#rechercheParLieu div#geolocalisation{
+    display: inline-block;
+    float: right;
+    height: 30px;
+    width: 30px;
+    border-left: solid 1px #ccc;
+    cursor: pointer;
+}
+div#rechercheParLieu div#geolocalisation img{
+    margin: 5px;
+}
+div.personneCherchee{
+    position: relative;
+    height: 50px;
+    width: 303px;
+    margin: 0px 10px -1px 10px;
+    background-color: #fff;
+    border: solid 1px #ccc;
+    box-shadow: 1px 1px 3px #ccc;
+}
