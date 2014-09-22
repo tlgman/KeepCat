@@ -12,7 +12,7 @@
     outline: none; /* bordure bleu lors du focus d'un input */
 }
 html{
-    background-image: url(resources/iphone.png);
+    background-image: url(../resources/iphone.png);
     background-repeat: no-repeat;
     background-position-x: 50px;
     background-position-y: 50px;
@@ -34,7 +34,7 @@ body{
     height: 575px;
     width: 325px;
     background-color: #eee;
-    background-image: url(resources/chat.png);
+    background-image: url(../resources/chat.png);
     background-repeat: no-repeat;
     background-position-y: 85%;
     background-position-x: 10px;
@@ -157,7 +157,7 @@ body#corpsAccueil div#connexion{
     border-radius: 30px;
     overflow: hidden;
 }
-body#corpsAccueil div#connexion input{
+body#corpsAccueil div#connexion input.text{
     height: 40px;
     width: 285px;
     margin: 5px 10px;
@@ -167,10 +167,11 @@ body#corpsAccueil div#connexion input{
     text-align: center;
     background-color: inherit;
 }
-body#corpsAccueil div#connexion input::-webkit-input-placeholder{
+body#corpsAccueil div#connexion input.text::-webkit-input-placeholder{
     color: #fff;
 }
-body#corpsAccueil div#connexion button{
+
+body#corpsAccueil div#connexion input[type="submit"]{
     height: 50px;
     width: 305px;
     background-color: #004b46;
@@ -268,6 +269,7 @@ div#generalProfil p#nom{
     text-align: center;
     font-weight: bold;
     font-size: 17px;
+    text-transform: capitalize;
 }
 div#generalProfil p#age img,
 div#generalProfil p#lieu img,

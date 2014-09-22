@@ -1,16 +1,12 @@
 <?php include_once './head.html'; ?>
 
 <body>
-    <header>
-        <a href="accueil.php"><img src="resources/icones/back.png" id="iconeHeaderGauche"/></a>
-        <p id="titre">Profil</p>
-        <a href="#"><img src="resources/icones/settings.png"  id="iconeHeaderDroit"/></a>
-    </header>
+    <?php headerTop('Profil', $retPage); ?>
     
     <div id="menuProfil">
-        <a href="profil.php"><div id="ongletProfilGauche">Profil</div></a><!--
+        <a href="index.php?page=profil"><div id="ongletProfilGauche">Profil</div></a><!--
         --><a href="#"><div id="ongletProfilCentre" style="color:#fff;background:#2789e4;">Animaux</div></a><!--
-        --><a href="avis.php"><div id="ongletProfilDroit">Avis</div></a>
+        --><a href="index.php?page=avis"><div id="ongletProfilDroit">Avis</div></a>
     </div>
     
     <div class="animal">

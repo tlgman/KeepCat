@@ -1,11 +1,7 @@
 <?php include_once './head.html'; ?>
 
 <body>
-    <header>
-        <a href="accueil.php"><img src="resources/icones/back.png" id="iconeHeaderGauche"/></a>
-        <p id="titre">Se proposer</p>
-        <a href="#"><img src="resources/icones/settings.png"  id="iconeHeaderDroit"/></a>
-    </header>
+    <?php headerTop('Se proposer', $retPage); ?>
 
     <p id="disponible">
         Se rendre disponible

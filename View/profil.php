@@ -1,16 +1,12 @@
 <?php include_once './head.html'; ?>
 
 <body>
-    <header>
-        <a href="accueil.php"><img src="resources/icones/back.png" id="iconeHeaderGauche"/></a>
-        <p id="titre">Profil</p>
-        <a href="#"><img src="resources/icones/settings.png"  id="iconeHeaderDroit"/></a>
-    </header>
+    <?php headerTop('Profil', $retPage); ?>
     
     <div id="menuProfil">
         <a href="#"><div id="ongletProfilGauche" style="color:#fff;background:#2789e4;">Profil</div></a><!--
-        --><a href="animaux.php"><div id="ongletProfilCentre">Animaux</div></a><!--
-        --><a href="avis.php"><div id="ongletProfilDroit">Avis</div></a>
+        --><a href="index.php?page=animaux"><div id="ongletProfilCentre">Animaux</div></a><!--
+        --><a href="index.php?page=avis"><div id="ongletProfilDroit">Avis</div></a>
     </div>
     
     <div id="photoProfil">
@@ -18,8 +14,8 @@
     </div>
     
     <div id="generalProfil">
-        <p id="nom">Jean Paul</p>
-        <p id="age"><img src="resources/icones/birthday.png"/>26 ans</p>
+        <p id="nom"><?php echo $user->first_name.' '.$user->name;?></p>
+        <p id="age"><img src="resources/icones/birthday.png"/><?php echo $user->age.' ans'; ?></p>
         <p id="lieu"><img src="resources/icones/location.png"/>Lyon</p>
         <span id="note">4.0</span>
     </div>

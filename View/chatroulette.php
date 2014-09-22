@@ -1,11 +1,7 @@
 <?php include_once './head.html'; ?>
 
 <body>
-    <header>
-        <a href="contact.php"><img src="resources/icones/back.png" id="iconeHeaderGauche"/></a>
-        <p id="titre">Chat-Roulette</p>
-        <a href="#"><img src="resources/icones/settings.png"  id="iconeHeaderDroit"/></a>
-    </header>
+    <?php headerTop('Chat-Roulette', $retPage); ?>
 
     <div class="bulleDroite bulle">
         ldsihfdifds ksdg sdjkgsdgu sdjgnsdl bsdkjg bsdgsd gisdopg sdog
